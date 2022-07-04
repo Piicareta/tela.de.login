@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /*  --- Background --- */
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+    /*  --- Formulário --- */
+
+.container {
+    background-color: rgb(255, 243, 217, 0.8);
+    width: 22em;
+    height: 34em;
+    margin: 70px 80px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px, 5px 5px 15px inset white;
+    transform: translate(-200px);
+    opacity: 0;
+    transition: 2s;
+}
+
+.form_load {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.titulo {
+    text-align: center;
+    padding: 30px 0;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+}
+
+    /*  --- Inputs --- */
+
+.email {
+    display: grid;
+    justify-items: center;
+    line-height: 30px;
+    font-family: 'Jost', sans-serif;
+}
+
+#email {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px black inset;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    transition: 300ms;
+}
+
+#email:focus {
+    box-shadow: 2px 2px 4px black inset;
+    outline: none;
+}
+#email::placeholder {
+    transition: 300ms;
+}
+
+#email:focus::placeholder {
+    opacity: 0;
+}
+
+.senha {
+    display: grid;
+    justify-items: center;
+    padding: 20px 0;
+    line-height: 30px;
+    font-family: 'Jost', sans-serif;
+}
+
+#senha {
+    border: none;
+    padding: 8px 20px;
+    box-shadow: 2px 2px 8px black inset;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    transition: 300ms;
+}
+
+#senha:focus {
+    box-shadow: 2px 2px 4px black inset;
+    outline: none;
+}
+
+#senha::placeholder {
+    transition: 300ms;
+}
+
+#senha:focus::placeholder {
+    opacity: 0;
+}
+
+/*  --- Show/Hide Icon --- */
+
+.icon {
+    position: relative;
+}
+
+.icon > img {
+    position: absolute;
+    top: 9px;
+}
+
+.iconhide {
+    opacity: 0;
+    width: 22px;
+    right: 10px;
+}
+
+.iconshow {
+    width: 20px;
+    right: 11px;
+}
+
+    /*  --- Esqueceu a Senha --- */
+
+.forget {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 0 20px 0;
+    font-family: 'Jost', sans-serif;
+    color: rgb(110, 28, 28);
+}
+
+.forget:active {
+    color: rgb(200, 51, 51);
+}
+
+    /*  --- Botao Entrar --- */
+
+.botao {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    border: none;
+    background-color: brown;
+    color: rgb(255, 243, 217);
+    padding: 10px 80px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px black;
+    transition: 300ms;
+    font-family: 'Jost', sans-serif;
+}
+
+.botao:hover {
+    background-color: rgb(110, 28, 28);
+    box-shadow: 4px 4px 10px black;
+}
+
+    /*  --- Inscreva-se --- */
+
+.sign {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 90px;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    color: rgb(110, 28, 28);
+}
+
+.sign:active {
+    color: rgb(200, 51, 51);
+}
+
+    /*  --- Imagens --- */
+
+.nago {
+    position: absolute;
+    height: 600px;
+    right: 0;
+    top: 0;
+    margin: 40px 450px 0 0;
+    transform: translate(400px);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.ram {
+    position: absolute;
+    height: 520px;
+    right: 0px;
+    top: 90px;
+    margin: 40px 50px 0 0;
+    transform: translate(-400px);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.nago_load, .ram_load {
+    transform: translate(0);
+    opacity: 1;
+}
+
+    /*  --- Responsividade Small --- */
+
+@media screen and (max-width:1280px) {
+    .nago, .ram {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        margin: 70px auto;
+    }
+}
