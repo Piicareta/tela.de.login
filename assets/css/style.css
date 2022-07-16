@@ -141,6 +141,7 @@ body {
 
 .botao {
     display: block;
+    cursor: pointer;
     margin: 0 auto;
     position: relative;
     top: 10px;
